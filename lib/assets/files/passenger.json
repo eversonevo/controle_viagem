@@ -1,0 +1,30 @@
+{
+    "passenger":[
+        {
+            "code" : 1,
+            "name" : "Everson Evo",
+            "sex" : "M",
+            "dt_birth" : "15/10/1981",
+            "rg" : "6.437.653-5",
+            "cpf" : "030.027.699-08",
+            "phone1" : "(41) 99948-2740",
+            "phone2" : "(00) 0000-0000",
+            "email" : "eversfw@gmail.com",
+            "tariff" : "professor",
+            "form_payment" : "entrance_5"
+        },
+        {
+            "code" : 2,
+            "name" : "Claudemir Andreassa",
+            "sex" : "M",
+            "dt_birth" : "00/00/0000",
+            "rg" : "0.000.000-0",
+            "cpf" : "000.000.000-00",
+            "phone1" : "(41) 99618-1399",
+            "phone2" : "(41) 3292-9412",
+            "email" : "claudemirandreassa@gmail.com",
+            "tariff" : "normal",
+            "form_payment" : "entrance_3"
+        }
+    ]
+}
