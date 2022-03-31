@@ -13,23 +13,29 @@ class HomePage extends GetView<HomeController> {
       ),
       body: Container(
         child: Center(
-          child: Expanded(
-            child: Row(
-              children: [
-                TextButton(
+          child: Row(
+            children: [
+              Expanded(
+                child: TextButton(
                     onPressed: controller.accessPassenger,
                     child: const Text('Passageiros')),
-                TextButton(
+              ),
+              Expanded(
+                child: TextButton(
                     onPressed: controller.accessPayments,
                     child: const Text('Pagamentos')),
-                TextButton(
+              ),
+              Expanded(
+                child: TextButton(
                     onPressed: controller.accessReports,
                     child: const Text('Relatórios')),
-                TextButton(
+              ),
+              Expanded(
+                child: TextButton(
                     onPressed: controller.accessUser,
                     child: const Text('Usuários')),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
