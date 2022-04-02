@@ -12,6 +12,7 @@ class Passenger {
   String email;
   String tariff;
   String form_payment;
+  String advisor;
   Passenger({
     required this.code,
     required this.name,
@@ -24,6 +25,7 @@ class Passenger {
     required this.email,
     required this.tariff,
     required this.form_payment,
+    required this.advisor
   });
 
   Map<String, dynamic> toMap() {
@@ -39,12 +41,13 @@ class Passenger {
       'email': email,
       'tariff': tariff,
       'form_payment': form_payment,
+      'advisor' : advisor,
     };
   }
 
   factory Passenger.fromMap(Map<String, dynamic> map) {
     return Passenger(
-      code: map['code']?.toInt() ?? 0,
+      code: map['code']?.toInt() ?? 99,
       name: map['name'] ?? '',
       sex: map['sex'] ?? '',
       dt_birth: map['dt_birth'] ?? '',
@@ -55,6 +58,7 @@ class Passenger {
       email: map['email'] ?? '',
       tariff: map['tariff'] ?? '',
       form_payment: map['form_payment'] ?? '',
+      advisor: map['advisor'] ?? '',
     );
   }
 

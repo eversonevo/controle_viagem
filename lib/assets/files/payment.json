@@ -1,0 +1,24 @@
+{
+    "passenger":[
+        {
+            "code" : 1,
+            "code_passenger": 1,
+            "entrance" : true,
+            "portion1" : false,
+            "portion2" : false,
+            "portion3" : false,
+            "portion4" : false,
+            "portion5" : false            
+        },
+        {
+            "code" : 2,
+            "code_passenger": 2,
+            "entrance" : true,
+            "portion1" : true,
+            "portion2" : false,
+            "portion3" : false,
+            "portion4" : false,
+            "portion5" : false
+        }
+    ]
+}

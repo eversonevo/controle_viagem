@@ -1,4 +1,4 @@
-import 'package:controle_viagem/app/modules/passenger/repository/widgets/card_passenger.dart';
+import 'package:controle_viagem/app/modules/passenger/widgets/card_passenger.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import './passenger_controller.dart';
@@ -23,7 +23,8 @@ class PassengerPage extends GetView<PassengerController> {
                   FloatingActionButton(
                     child: const Icon(Icons.add),
                     onPressed: (){
-                      print('Adicionar Usuário');
+                      print('cliquei');
+                      controller.insertPassanger();
                     }),
               ],
             ),
