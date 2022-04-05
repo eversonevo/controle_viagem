@@ -1,5 +1,4 @@
 import 'package:controle_viagem/app/models/passenger.dart';
-import 'package:controle_viagem/app/modules/passenger/widgets/insert_passanger.dart';
 import 'package:controle_viagem/app/repository/i_passenger_repository.dart';
 import 'package:get/get.dart';
 
@@ -38,7 +37,7 @@ class PassengerController extends GetxController {
 
   void insertPassanger(){
     print('passou');
-    const InsertPassanger();
+    Get.toNamed('/passengerData');
   }
   
 }

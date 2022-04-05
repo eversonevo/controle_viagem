@@ -2,6 +2,7 @@ import 'package:controle_viagem/app/modules/home/home_bindings.dart';
 import 'package:controle_viagem/app/modules/home/home_module.dart';
 import 'package:controle_viagem/app/modules/home/home_page.dart';
 import 'package:controle_viagem/app/modules/passenger/passenger_module.dart';
+import 'package:controle_viagem/app/modules/passenger_data/passenger_data_module.dart';
 import 'package:controle_viagem/app/modules/payments/payments_module.dart';
 import 'package:controle_viagem/app/modules/reports/reports_module.dart';
 import 'package:controle_viagem/app/modules/user/user_module.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         ...PaymentsModule().routers,
         ...ReportsModule().routers,
         ...UserModule().routers,
+        ...PassengerDataModule().routers,
       ],
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,

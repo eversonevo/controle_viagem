@@ -13,7 +13,7 @@ class CardPassenger extends GetView<PassengerController> {
    Widget build(BuildContext context) {
        return InkWell(
          onTap: (){
-           print('clquei');
+           Get.toNamed('/passengerData',arguments: controller.listPassengers[_index]);
          },
          child: Padding(
            padding: const EdgeInsets.only(left: 8, right: 8, top: 8, bottom: 0),
