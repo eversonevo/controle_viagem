@@ -1,4 +1,5 @@
-import 'package:controle_viagem/app/models/passenger.dart';
+import 'package:controle_viagem/app/modules/passenger_data/widgets/dropdown_passenger.dart';
+import 'package:controle_viagem/app/modules/passenger_data/widgets/textformfield_passenger.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import './passenger_data_controller.dart';
@@ -11,25 +12,17 @@ class PassengerDataPage extends GetView<PassengerDataController> {
     Widget build(BuildContext context) {
         return Scaffold(
             appBar: AppBar(title: const Text('PassengerDataPage'),),
-            body: Container(
-              child: Column(
-                children: [
-                  Visibility(
-                    visible: controller.alter.value,
-                    child: Text('TRUE')),
-                  Visibility(
-                    visible: !controller.alter.value,
-                    child: Text('FALSE')),
-                  TextFormField(
-                    controller: controller.editingController[0],
-                    decoration: InputDecoration(
-                      hintText: controller.editingController[0].text,
-                    ),
-                  ),
-                ],
-              ),
+            body: ListView.builder(
+                    itemCount: controller.editingController.length,
+                    itemBuilder: (_,index){
+                      if ((index != 8) & (index != 9)){
+                          return TextformfieldPassenger(index: index);
+                      }
+                      return const DropdownPassenger();
+
+                    }),                  
               
-            ),
+              
         );
     }
 }
