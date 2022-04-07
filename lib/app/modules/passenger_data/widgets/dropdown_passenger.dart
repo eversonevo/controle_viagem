@@ -18,7 +18,7 @@ class DropdownPassenger extends GetView<PassengerDataController> {
                hint: Text(controller.validatePayment(controller.editingController[_index].text)),
                value: controller.selectedValue,
                onChanged: (newValue) {
-               controller.onSelected(newValue!);
+               controller.onSelected(newValue!,1);
                },
                elevation: 10,
                items: [
@@ -46,8 +46,27 @@ class DropdownPassenger extends GetView<PassengerDataController> {
           print('payment');
         }
         if (teste2){
-          print('advisor');
-        }
+return DropdownButton<String>(
+               hint: Text(controller.validatePayment(controller.editingController[_index].text)),
+               value: controller.selectedValue,
+               onChanged: (newValue) {
+               controller.onSelected(newValue!,2);
+               },
+               elevation: 10,
+               items: [
+                 DropdownMenuItem(
+                  child: Text("Normal"),
+                  value: 'Normal',
+                 ),
+                 DropdownMenuItem(
+                   child: Text("Idoso/Criança"),
+                   value: 'Idoso/Criança',
+                 ),
+                 DropdownMenuItem(
+                   child: Text("Professor"),
+                   value: 'Professor',
+                 ),                 
+              ]);        }
         if (teste3){
           print('tariff');
         }

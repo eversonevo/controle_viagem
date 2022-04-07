@@ -92,15 +92,16 @@ class PassengerDataController extends GetxController {
     'Entrada + 5 Parcelas'
      ];
 
-    void onSelected(String value) {
+    void onSelected(String value, int type) {
         selectedValue = value;
         update();
         print(selectedValue);
-        changeLanguage(selectedValue);
+        changeLanguage(selectedValue,type);
   }
 
-  changeLanguage(String? selectedLanguage) {
-     switch (selectedLanguage) {
+  changeLanguage(String? selectedLanguage, int type) {     
+     if (type == 1){
+          switch (selectedLanguage) {
      case 'Pagamento à vista':
        Get.updateLocale(Locale('Pagamento à vista'));
        print('Changed to En');
@@ -126,7 +127,29 @@ class PassengerDataController extends GetxController {
        print('Pagamento à vista');
        break;
     }
+     } else if (type == 2){
+       switch (selectedLanguage) {
+     case 'Normal':
+       Get.updateLocale(Locale('Normal'));
+       print('Changed to En');
+       break;
+     case 'Professor':
+       Get.updateLocale(Locale('Professor'));
+       print('Changed to Es');
+       break;
+       case 'Idoso/Criança':
+       Get.updateLocale(Locale('Idoso/Criança'));
+       print('Changed to Es');
+       break;       
+     default:
+       Get.updateLocale(Locale('Normal'));
+       print('Normal');
+       break;
+    }
+     }
+     
   }
+
   
 }
 
