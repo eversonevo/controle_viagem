@@ -15,10 +15,12 @@ class PassengerDataPage extends GetView<PassengerDataController> {
             body: ListView.builder(
                     itemCount: controller.editingController.length,
                     itemBuilder: (_,index){
-                      if ((index != 8) & (index != 9)){
+                      print(index);
+                      if ((index != 8)&(index != 9) & (index != 10)){
                           return TextformfieldPassenger(index: index);
                       }
-                      return const DropdownPassenger();
+                      
+                      return DropdownPassenger(index: index);
 
                     }),                  
               

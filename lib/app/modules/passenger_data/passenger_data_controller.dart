@@ -30,6 +30,17 @@ class PassengerDataController extends GetxController {
     'Entrada + 5 Parcelas'
     ].obs;
 
+    RxList<String> listAdvidor = <String>[
+      'Everson',
+      'Claude',      
+    ].obs;
+
+    RxList<String> listTariff = <String>[
+      'Normal',
+      'Professor',
+      'Idoso/Criança',      
+    ].obs;
+
   @override
   void onInit() {
       // recebe por argumento ao clicar no passageiro (para alteração e exclusão de passageiro)
@@ -67,5 +78,55 @@ class PassengerDataController extends GetxController {
         return form_payment;
     }
   }
+
+  // dropdow
+
+      String? selectedValue;
+
+
+   var language = <String>[
+    'Pagamento à vista',
+    'Entrada + 2 Parcelas',
+    'Entrada + 3 Parcelas',
+    'Entrada + 4 Parcelas',
+    'Entrada + 5 Parcelas'
+     ];
+
+    void onSelected(String value) {
+        selectedValue = value;
+        update();
+        print(selectedValue);
+        changeLanguage(selectedValue);
+  }
+
+  changeLanguage(String? selectedLanguage) {
+     switch (selectedLanguage) {
+     case 'Pagamento à vista':
+       Get.updateLocale(Locale('Pagamento à vista'));
+       print('Changed to En');
+       break;
+     case 'Entrada + 2 Parcelas':
+       Get.updateLocale(Locale('Entrada + 2 Parcelas'));
+       print('Changed to Es');
+       break;
+       case 'Entrada + 3 Parcelas':
+       Get.updateLocale(Locale('Entrada + 3 Parcelas'));
+       print('Changed to Es');
+       break;
+       case 'Entrada + 4 Parcelas':
+       Get.updateLocale(Locale('Entrada + 4 Parcelas'));
+       print('Changed to Es');
+       break;
+       case 'Entrada + 5 Parcelas':
+       Get.updateLocale(Locale('Entrada + 5 Parcelas'));
+       print('Changed to Es');
+       break;
+     default:
+       Get.updateLocale(Locale('Pagamento à vista'));
+       print('Pagamento à vista');
+       break;
+    }
+  }
   
 }
+

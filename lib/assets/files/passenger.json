@@ -27,6 +27,20 @@
             "tariff" : "normal",
             "form_payment" : "entrance_3",
             "advisor" : "Claude"
+        },
+        {
+            "code" : 3,
+            "name" : "Véio Mário",
+            "sex" : "M",
+            "dt_birth" : "00/00/0000",
+            "rg" : "0.000.000-0",
+            "cpf" : "000.000.000-00",
+            "phone1" : "(41) 99618-1399",
+            "phone2" : "(41) 3292-9412",
+            "email" : "veiomario@gmail.com",
+            "tariff" : "Idoso/Criança",
+            "form_payment" : "entrance_4",
+            "advisor" : "Claude"
         }
     ]
 }
