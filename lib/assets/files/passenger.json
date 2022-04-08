@@ -10,7 +10,7 @@
             "phone1" : "(41) 99948-2740",
             "phone2" : "(00) 0000-0000",
             "email" : "eversfw@gmail.com",
-            "tariff" : "professor",
+            "tariff" : "Professor",
             "form_payment" : "entrance_5",
             "advisor" : "Everson"
         },
@@ -24,7 +24,7 @@
             "phone1" : "(41) 99618-1399",
             "phone2" : "(41) 3292-9412",
             "email" : "claudemirandreassa@gmail.com",
-            "tariff" : "normal",
+            "tariff" : "Normal",
             "form_payment" : "entrance_3",
             "advisor" : "Claude"
         },

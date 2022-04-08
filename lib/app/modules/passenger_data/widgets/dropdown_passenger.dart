@@ -13,12 +13,36 @@ class DropdownPassenger extends GetView<PassengerDataController> {
         bool teste1 = controller.listPayments.contains(controller.validatePayment(controller.editingController[_index].text));
         bool teste2 = controller.listAdvidor.contains(controller.validatePayment(controller.editingController[_index].text));
         bool teste3 = controller.listTariff.contains(controller.validatePayment(controller.editingController[_index].text));
+        if (teste3){
+          return DropdownButton<String>(
+               hint: Text(controller.validatePayment(controller.editingController[_index].text)),
+               value: controller.selectedValueTariff,
+               onChanged: (newValue) {
+               controller.onSelectedTariff(newValue!);
+               },
+               elevation: 10,
+               items: [
+                 DropdownMenuItem(
+                  child: Text("Normal"),
+                  value: 'Normal',
+                 ),
+                 DropdownMenuItem(
+                   child: Text("Idoso/Criança"),
+                   value: 'Idoso/Criança',
+                 ),                 
+                 DropdownMenuItem(
+                   child: Text("Professor"),
+                   value: 'Professor',
+                 ),                 
+              ]);
+          
+        }
         if (teste1){
           return DropdownButton<String>(
                hint: Text(controller.validatePayment(controller.editingController[_index].text)),
-               value: controller.selectedValue,
+               value: controller.selectedValuePayment,
                onChanged: (newValue) {
-               controller.onSelected(newValue!,1);
+               controller.onSelectedPayment(newValue!);
                },
                elevation: 10,
                items: [
@@ -46,33 +70,32 @@ class DropdownPassenger extends GetView<PassengerDataController> {
           print('payment');
         }
         if (teste2){
-return DropdownButton<String>(
+          return DropdownButton<String>(
                hint: Text(controller.validatePayment(controller.editingController[_index].text)),
-               value: controller.selectedValue,
+               value: controller.selectedValueAdvisor,
                onChanged: (newValue) {
-               controller.onSelected(newValue!,2);
+               controller.onSelectedAdvisor(newValue!);
                },
                elevation: 10,
                items: [
                  DropdownMenuItem(
-                  child: Text("Normal"),
-                  value: 'Normal',
+                  child: Text("Claude"),
+                  value: 'Claude',
                  ),
                  DropdownMenuItem(
-                   child: Text("Idoso/Criança"),
-                   value: 'Idoso/Criança',
-                 ),
-                 DropdownMenuItem(
-                   child: Text("Professor"),
-                   value: 'Professor',
+                   child: Text("Everson"),
+                   value: 'Everson',
                  ),                 
-              ]);        }
-        if (teste3){
-          print('tariff');
+              ]);
+          
         }
-       return Text(controller.validatePayment(controller.editingController[_index].text));
-  }
+        return Container();
+        }
+
+        
 }
+
+ 
 
 /*
 DropdownButton(

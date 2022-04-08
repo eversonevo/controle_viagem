@@ -79,9 +79,9 @@ class PassengerDataController extends GetxController {
     }
   }
 
-  // dropdow
+  // dropdown - payments
 
-      String? selectedValue;
+      String? selectedValuePayment;
 
 
    var language = <String>[
@@ -92,63 +92,97 @@ class PassengerDataController extends GetxController {
     'Entrada + 5 Parcelas'
      ];
 
-    void onSelected(String value, int type) {
-        selectedValue = value;
+    void onSelectedPayment(String value) {
+        selectedValuePayment = value;
         update();
-        print(selectedValue);
-        changeLanguage(selectedValue,type);
+        changePayment(selectedValuePayment);
   }
 
-  changeLanguage(String? selectedLanguage, int type) {     
-     if (type == 1){
-          switch (selectedLanguage) {
+  changePayment(String? selectedPayment) {     
+     switch (selectedPayment) {
      case 'Pagamento à vista':
-       Get.updateLocale(Locale('Pagamento à vista'));
-       print('Changed to En');
+       Get.updateLocale(const Locale('Pagamento à vista'));
        break;
      case 'Entrada + 2 Parcelas':
-       Get.updateLocale(Locale('Entrada + 2 Parcelas'));
-       print('Changed to Es');
+       Get.updateLocale(const Locale('Entrada + 2 Parcelas'));
        break;
        case 'Entrada + 3 Parcelas':
-       Get.updateLocale(Locale('Entrada + 3 Parcelas'));
-       print('Changed to Es');
+       Get.updateLocale(const Locale('Entrada + 3 Parcelas'));
        break;
        case 'Entrada + 4 Parcelas':
-       Get.updateLocale(Locale('Entrada + 4 Parcelas'));
-       print('Changed to Es');
+       Get.updateLocale(const Locale('Entrada + 4 Parcelas'));
        break;
        case 'Entrada + 5 Parcelas':
-       Get.updateLocale(Locale('Entrada + 5 Parcelas'));
-       print('Changed to Es');
+       Get.updateLocale(const Locale('Entrada + 5 Parcelas'));
        break;
      default:
-       Get.updateLocale(Locale('Pagamento à vista'));
-       print('Pagamento à vista');
+       Get.updateLocale(const Locale('Pagamento à vista'));
        break;
-    }
-     } else if (type == 2){
-       switch (selectedLanguage) {
-     case 'Normal':
-       Get.updateLocale(Locale('Normal'));
-       print('Changed to En');
+     }
+  }
+
+
+  // dropdown - advisor
+
+      String? selectedValueAdvisor;
+
+
+   var advisor = <String>[
+    'Claude',
+    'Everson'
+     ];
+
+    void onSelectedAdvisor(String value) {
+        selectedValueAdvisor = value;
+        update();
+        changePayment(selectedValueAdvisor);
+  }
+
+  changeAdvisor(String? selectedAdvisor) {     
+     switch (selectedAdvisor) {
+     case 'Claude':
+       Get.updateLocale(const Locale('Claude'));
        break;
-     case 'Professor':
-       Get.updateLocale(Locale('Professor'));
-       print('Changed to Es');
-       break;
-       case 'Idoso/Criança':
-       Get.updateLocale(Locale('Idoso/Criança'));
-       print('Changed to Es');
+     case 'Everson':
+       Get.updateLocale(const Locale('Everson'));
        break;       
      default:
-       Get.updateLocale(Locale('Normal'));
-       print('Normal');
+       Get.updateLocale(const Locale('Claude'));
        break;
-    }
      }
-     
   }
+
+  // dropdown - tariff
+
+      String? selectedValueTariff;
+
+
+   var tariff= <String>[
+    'Normal',
+    'Idoso/Criança',
+    'Professor'
+     ];
+
+    void onSelectedTariff(String value) {
+        selectedValueTariff = value;
+        update();
+        changeTariff(selectedValueTariff);
+  }
+
+  changeTariff(String? selectedTariff) {     
+     switch (selectedTariff) {
+     case 'Idoso/Criança':
+       Get.updateLocale(const Locale('Idoso/Criança'));
+       break;
+     case 'Professor':
+       Get.updateLocale(const Locale('Professor'));
+       break;       
+     default:
+       Get.updateLocale(const Locale('Normal'));
+       break;
+     }
+  }
+
 
   
 }
